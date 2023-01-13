@@ -70,9 +70,9 @@ jobs:
       - run:
           name: Creating Windows Artifacts
           command: |
-            mkdir /tmp/artifacts;
+            mkdir /tmp/artif;
       - store_artifacts:
-          path: /tmp/artifacts
+          path: /tmp/artif
           destination: exawinup.exe
       - run: if [ -n "$CIRCLE_TAG" ]; then yarn av-whitelist; else echo "Not a tagged release."; fi
 
