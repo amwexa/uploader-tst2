@@ -73,7 +73,7 @@ jobs:
             mkdir /tmp/artif;
       - store_artifacts:
           path: /tmp/artif
-          destination: exawinup.exe
+       #  destination: exawinup.exe
       - run: if [ -n "$CIRCLE_TAG" ]; then yarn av-whitelist; else echo "Not a tagged release."; fi
 
 
