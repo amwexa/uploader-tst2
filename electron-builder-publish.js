@@ -103,11 +103,12 @@ console.log('APPVEYOR_REPO_TAG:', process.env.APPVEYOR_REPO_TAG);
 
 if ( (process.env.CIRCLE_TAG && process.env.CIRCLE_TAG.length > 0) ||
      (process.env.APPVEYOR_REPO_TAG_NAME && process.env.APPVEYOR_REPO_TAG_NAME.length > 0) ) {
-  let releaseType = null;
-
+  //let releaseType = null;
+  let releaseType = 'release';
   if ( (process.env.CIRCLE_TAG && process.env.CIRCLE_TAG.indexOf('-') !== -1) ||
        (process.env.APPVEYOR_REPO_TAG_NAME && process.env.APPVEYOR_REPO_TAG_NAME.indexOf('-') !== -1) ) {
-    releaseType = 'prerelease';
+   //   releaseType = 'prerelease';
+      releaseType = 'relelase';
   } else {
     releaseType = 'release';
   }
@@ -116,7 +117,7 @@ if ( (process.env.CIRCLE_TAG && process.env.CIRCLE_TAG.length > 0) ||
     {
       provider: 'github', //provided used
       owner: 'amwexa', // required to overwrite existing binaries
-      releaseType: 'draft', //dynamic conf normally
+      releaseType: 'release', //dynamic conf normally
     },
     {
       provider: 's3',
