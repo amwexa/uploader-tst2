@@ -115,12 +115,12 @@ if ( (process.env.CIRCLE_TAG && process.env.CIRCLE_TAG.length > 0) ||
   config.publish = [
     {
       provider: 'github',
-      owner: 'exadoctor-com', // required to overwrite existing binaries
+      owner: 'amwexa', // required to overwrite existing binaries
       releaseType: 'draft',
     },
     {
       provider: 's3',
-      bucket: 'downloads.tidepool.org',
+      bucket: 'downloads.exadoctor.comg',
     },
   ];
 }
