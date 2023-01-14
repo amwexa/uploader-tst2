@@ -114,9 +114,9 @@ if ( (process.env.CIRCLE_TAG && process.env.CIRCLE_TAG.length > 0) ||
 
   config.publish = [
     {
-      provider: 'github',
+      provider: 'github', //provided used
       owner: 'amwexa', // required to overwrite existing binaries
-      releaseType: 'draft',
+      releaseType: 'draft', //dynamic conf normally
     },
     {
       provider: 's3',
