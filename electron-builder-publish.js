@@ -108,7 +108,7 @@ if ( (process.env.CIRCLE_TAG && process.env.CIRCLE_TAG.length > 0) ||
   if ( (process.env.CIRCLE_TAG && process.env.CIRCLE_TAG.indexOf('-') !== -1) ||
        (process.env.APPVEYOR_REPO_TAG_NAME && process.env.APPVEYOR_REPO_TAG_NAME.indexOf('-') !== -1) ) {
    //   releaseType = 'prerelease';
-      releaseType = 'relelase';
+      releaseType = 'release';
   } else {
     releaseType = 'release';
   }
@@ -116,7 +116,7 @@ if ( (process.env.CIRCLE_TAG && process.env.CIRCLE_TAG.length > 0) ||
   config.publish = [
     {
       provider: 'github', //provided used
-      owner: 'amwexa', // required to overwrite existing binaries
+      owner: 'amwexa', // required to overwrite existing binaries in github
       releaseType: 'release', //dynamic conf normally
     },
     {
